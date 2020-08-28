@@ -10,7 +10,11 @@ import clipboard                    # for copying text to clipboard
                         pyinstaller -F -i "heart.ico" reader.py
 """
 print('')
-print('Reader - program for counting characters in \n "Detailed_Medical_Report_1.0.7.pdf" form. \n  |||   Version 2020.08.28   |||   GitHub:\nhttps://github.com/mmeest/Counting-Characters-in-Zipped-PDF-with-Python.git')
+print('  Reader - program for counting characters in')
+print('  "Detailed_Medical_Report_1.0.7.pdf" form.')
+print('  Written by Martin Maasik. Github:')
+print('  https://github.com/mmeest/Counting-Characters-in-Zipped-PDF-with-Python.git')
+print('  ver. 2020.08.28')
 print('')
 print('GNU General Public Licence'.center(80, '-'))
 print('This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.')
