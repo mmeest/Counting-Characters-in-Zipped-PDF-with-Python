@@ -9,7 +9,15 @@ import clipboard                    # for copying text to clipboard
                         pip install pyinstaller
                         pyinstaller -F -i "heart.ico" reader.py
 """
-
+print('')
+print('Reader - program for counting characters in \n "Detailed_Medical_Report_1.0.7.pdf" form. \n  |||   Version 2020.08.28   |||   GitHub:\nhttps://github.com/mmeest/Counting-Characters-in-Zipped-PDF-with-Python.git')
+print('')
+print('GNU General Public Licence'.center(80, '-'))
+print('This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.')
+print('')
+print('This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.')
+print(''.center(80, '-'))
+print('')
 
 # file(.pdf) name to count characters
 pdf_document = input("Insert file(.pdf) name without extension: ") + ".pdf"
@@ -83,21 +91,14 @@ for i in real_value:
     if i != ' ':
         real_character_count += 1
 
-""" print(pdf_raw) """
+pdf_raw = pdf_raw.replace('</', '<').replace('/>', '>')
 
-# remove the end of string
-user_input_end = pdf_raw.find("</date><docSignature/></subform_12_2></Page12></Formular1>")
-clear_input = pdf_raw[:user_input_end]
 
-# remove the start of the string
-""" if "LanguageDropdown/><subform_1_2><IDNumber>" in pdf_raw:
-    user_input_start = pdf_raw.rfind("LanguageDropdown/><subform_1_2><IDNumber>")
-else:
-    user_input_start = pdf_raw.rfind("LanguageDropdown/><subform_1_2><IDNumber/>") """
-user_input_start = pdf_raw.rfind("<subform_1_2><IDNumber") + 13
-# clear_input - actual text inserted on form fields
-clear_input = clear_input[user_input_start:]
-""" print(clear_input) """
+# remove the start and end of the string
+user_input_start = pdf_raw.rfind("<subform_1_2><IDNumber")
+user_input_end = pdf_raw.rfind("<date><docSignature><subform_12_2>")
+clear_input = pdf_raw[user_input_start:user_input_end]
+
 
 # removing >0< - symbols
 clear_input = clear_input.replace('>0<', '><')
@@ -147,6 +148,3 @@ elif clipboard_copy == "B":
     clipboard.copy(clear_input_without_tags)
 elif clipboard_copy == "C":
     clipboard.copy(real_value + clear_input_without_tags)
-
-
-
