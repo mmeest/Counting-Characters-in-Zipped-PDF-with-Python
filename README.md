@@ -3,13 +3,13 @@
 # Counting-Characters-in-Zipped-PDF-with-Python
 Counting text symbols inside Zipped PDF files with Python script (+ Python script to Windows Executable with icon)
 
-# Features:
+## Features:
 * GNU licence notice
 * Command line application that count charachters in zipped .pdf
 * Feature to copy output values to clipboard
 * Both source code and executable
 
-# Output:
+## Output:
 1. String length(unzipped content) with spaces:
 2. String length(unzipped content) without spaces:
 3. String length(zipped content with <> - tags):
@@ -19,6 +19,6 @@ Counting text symbols inside Zipped PDF files with Python script (+ Python scrip
 7. String length - user input text with spaces:
 8. String length - user input text without spaces:
 
-# To create executable with heart icon('heart.ico'):
+## To create executable with heart icon('heart.ico'):
 * pip install pyinstaller
 * pyinstaller -F -i "heart.ico" reader.py
