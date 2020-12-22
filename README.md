@@ -1,4 +1,6 @@
-<img src="heart.ico" width="60" height="60" align="center">
+<p align="center">
+<img src="heart.ico" width="60" height="60">
+</p>
 
 # Counting-Characters-in-Zipped-PDF-with-Python
 Counting text symbols inside Zipped PDF files with Python script (+ Python script to Windows Executable with icon)
