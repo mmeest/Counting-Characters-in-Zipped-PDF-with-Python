@@ -22,3 +22,13 @@ Counting text symbols inside Zipped PDF files with Python script (+ Python scrip
 ## To create executable with heart icon('heart.ico'):
 * pip install pyinstaller
 * pyinstaller -F -i "heart.ico" reader.py
+
+## Version history
+
+### ver. 2020.08.28
+* Input PDF files without extention
+* Count zipped and unzipped content of PDF file
+
+### ver. 2020.12.22
+* Fixed auth. of file
+* Input file name can be entered with or without '.pdf' extention
