@@ -21,11 +21,16 @@ print('This program is free software; you can redistribute it and/or modify it u
 print('')
 print('This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.')
 print(''.center(80, '-'))
-print('')
+print('To paste file name: "Alt+Space, E, P"')
 
 # file(.pdf) name to count characters
-pdf_document = input("Insert file(.pdf) name without extension: ") + ".pdf"
-""" pdf_document = "test.pdf" """
+pdf_file = input("FILENAME: ")
+if pdf_file.endswith(".pdf"):
+    pdf_document = pdf_file
+    print("A " + pdf_document)
+else:
+    pdf_document = pdf_file + ".pdf"
+    print("B " + pdf_document)
 
 pdf = open(pdf_document, "rb").read()
 stream = re.compile(b'.*?FlateDecode.*?stream(.*?)endstream', re.S)
@@ -40,6 +45,7 @@ for s in re.findall(stream,pdf):
         """ print(string_slice)
         print("") """
         pdf_raw += string_slice
+        """ clipboard.copy(pdf_raw) """
     except:
         pass
 
@@ -50,8 +56,12 @@ cleantext = re.sub(clean, '', pdf_raw) """
 
 # removing line breakes
 pdf_raw = pdf_raw.replace('\r','').replace('\n','')
+""" clipboard.copy(pdf_raw) """
+
+
 # removing <> - tags
 cleantext = re.sub('<.*?>', '', pdf_raw)
+""" clipboard.copy(cleantext) """
 """ print(pdf_raw) """
 
 """ print(type(pdf_raw)) """
@@ -83,6 +93,8 @@ with open(pdf_document, "rb") as filehandle:
             charachter_count_clean += 1
 
 
+""" start = cleantext.find("000Please choose your language:")
+end = cleantext.find("CompletionDoctor's Signature1.0000000017") + 30 """
 start = cleantext.find("Please choose your language:Detailed Medical Report")
 end = cleantext.find("CompletionDoctor's Signature1") + 30
 
@@ -95,13 +107,22 @@ for i in real_value:
     if i != ' ':
         real_character_count += 1
 
+# replace tag markings
 pdf_raw = pdf_raw.replace('</', '<').replace('/>', '>')
+""" clipboard.copy(pdf_raw) """
 
 
 # remove the start and end of the string
 user_input_start = pdf_raw.rfind("<subform_1_2><IDNumber")
-user_input_end = pdf_raw.rfind("<date><docSignature><subform_12_2>")
+""" user_input_end = pdf_raw.rfind("<date><docSignature><subform_12_2>") """
+""" user_input_end = pdf_raw.find("<docSignature>")
 clear_input = pdf_raw[user_input_start:user_input_end]
+clipboard.copy(clear_input) """
+
+removed_start = pdf_raw[user_input_start:]
+user_input_end = removed_start.find("<docSignature")
+clear_input = removed_start[:user_input_end]
+""" clipboard.copy(clear_input) """
 
 
 # removing >0< - symbols
