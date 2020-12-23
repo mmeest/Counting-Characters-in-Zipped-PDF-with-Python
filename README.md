@@ -9,7 +9,10 @@ Counting text symbols inside Zipped PDF files with Python script (+ Python scrip
 * GNU licence notice:\
   https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 * Command line application that count charachters in zipped .pdf
-* Feature to copy output values to clipboard
+* Feature to copy output values to clipboard:
+  A - PDF Form
+  B - user input
+  C - PDF form and user input
 * Both source code and executable
 
 ## Output:
