@@ -3,7 +3,15 @@
 </p>
 
 # Counting-Characters-in-Zipped-PDF-with-Python
+Current program is written for document: **Detailed_Medical_Report_1.0.7-uus-versioon-nolimits.pdf**
 Counting text symbols inside Zipped PDF files with Python script (+ Python script to Windows Executable with icon)
+
+## Usage
+1. 'reader.exe' and '.pdf' document must be in same directory
+2. Doubleclick on 'reader.exe'
+3. Write PDF document name or paste it(Alt+Space, E, P) and click 'Enter'.
+4. Counted character values will be displayed(1-8).
+5. To copy PDF content to clipboard, choose A, B, or C and click 'Enter'. Or just click 'Enter' to exit.
 
 ## Features:
 * GNU licence notice:\
