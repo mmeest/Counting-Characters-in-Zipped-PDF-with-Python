@@ -14,7 +14,7 @@ Counting text symbols inside Zipped PDF files with Python script (+ Python scrip
 
 ## Output:
 | Output | |
-|--------| |
+|--------|--- |
 |**1. String length(unzipped content) with spaces:**|*(If this message is not eventually replaced by the proper contents...*\|
 **2. String length(unzipped content) without spaces:**        Same as above but without white spaces\
 **3. String length(zipped content with <> - tags):**          All zippe PDF content with  tags(E.g. Form)\
