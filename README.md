@@ -13,14 +13,14 @@ Counting text symbols inside Zipped PDF files with Python script (+ Python scrip
 * Both source code and executable
 
 ## Output:
-1. String length(unzipped content) with spaces:           *(If this message is not eventually replaced by the proper contents...*
-2. String length(unzipped content) without spaces:        Same as above but without white spaces
-3. String length(zipped content with <> - tags):          All zippe PDF content with <> tags(E.g. <Form>)
-4. String length(zipped content without <> - tags):       Same as above but <> tags removed
-5. String length - actual length of form with spaces:     All visible content of form(Form text and user input)
-6. String length - actual length of form without spaces:  Same as above but spaces removed
-7. String length - user input text with spaces:           Only user input text
-8. String length - user input text without spaces:        Same as above but spaces removed
+**1. String length(unzipped content) with spaces:**           *(If this message is not eventually replaced by the proper contents...*
+**2. String length(unzipped content) without spaces:**        Same as above but without white spaces
+**3. String length(zipped content with <> - tags):**          All zippe PDF content with  tags(E.g. Form)
+**4. String length(zipped content without <> - tags):**       Same as above but  tags removed
+**5. String length - actual length of form with spaces:**     All visible content of form(Form text and user input)
+**6. String length - actual length of form without spaces:**  Same as above but spaces removed
+**7. String length - user input text with spaces:**           Only user input text
+**8. String length - user input text without spaces:**        Same as above but spaces removed
 
 ## To create executable with heart icon('heart.ico'):
 * pip install pyinstaller
